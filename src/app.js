@@ -8,10 +8,8 @@ const app = express();
 
 app.use(express.json());
 
-// ✅ отдаём public (HTML/CSS/JS)
 app.use(express.static(path.join(__dirname, "..", "public")));
 
-// ✅ главная страница
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });

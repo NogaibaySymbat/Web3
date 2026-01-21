@@ -10,10 +10,10 @@ async function start() {
     await connectDB();
 
     app.listen(PORT, () => {
-      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(`Server running on http://localhost:${PORT}`);
     });
   } catch (err) {
-    console.error("❌ Startup error:", err.message);
+    console.error("Startup error:", err.message);
     process.exit(1);
   }
 }
